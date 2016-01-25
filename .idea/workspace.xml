@@ -1,24 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list id="7cd78b7d-7663-43a0-bf00-6c9ab03960ef" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dropwizard.config.yml" afterPath="$PROJECT_DIR$/dropwizard.config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
-    <list default="true" id="7eb793c0-f721-4830-976d-b1bbfaef802b" name="Rename packages" comment="change banner">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/banner.txt" afterPath="$PROJECT_DIR$/target/classes/banner.txt" />
+    <list id="7cd78b7d-7663-43a0-bf00-6c9ab03960ef" name="Default" comment="" />
+    <list default="true" id="7eb793c0-f721-4830-976d-b1bbfaef802b" name="Rename packages" comment="Delete Target classes">
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\assets\example.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\assets\pure-min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\banner.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\api\Saying.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\auth\ExampleAuthenticator.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\auth\ExampleAuthorizer.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\cli\RenderCommand.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\client\DropwizardConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\client\DropwizardGateway$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\client\DropwizardGateway$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\client\DropwizardGateway$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\client\DropwizardGateway$4.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\client\DropwizardGateway.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\client\ResourceRegister.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\client\WebAppGateway.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\db\AccountDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\db\PersonDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\filter\DateNotSpecifiedFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\filter\DateRequired.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\filter\DateRequiredFeature.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\models\Template.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\models\User.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\models\domain\Account.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\models\domain\Person.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\models\milestone\BiTemporalDateMilestonedImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\models\milestone\BusinessDateMilestoned.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\models\milestone\BusinessDateMilestonedImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\models\milestone\MilestonedObject.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\models\milestone\MilestonedObjectImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\models\milestone\ProcessingDateMilestoned.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\models\milestone\ProcessingDateMilestonedImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\resources\AccountResource.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\resources\FilteredResource.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\resources\PeopleResource.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\resources\PersonResource.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\resources\ProtectedResource.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\resources\ViewResource$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\resources\ViewResource$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\resources\ViewResource$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\resources\ViewResource$4.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\resources\ViewResource.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\util\DateUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\views\PersonView$Template.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\views\PersonView.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\views\freemarker\person.ftl" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\com\example\helloworld\views\mustache\person.mustache" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\migrations.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\views\ftl\iso88591.ftl" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\views\ftl\utf8.ftl" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\views\mustache\iso88591.mustache" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\classes\views\mustache\utf8.mustache" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\dropwizard-example-1.0.0-SNAPSHOT-shaded.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\dropwizard-example-1.0.0-SNAPSHOT-sources.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\dropwizard-example-1.0.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\maven-archiver\pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\maven-status\maven-compiler-plugin\compile\default-compile\createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\maven-status\maven-compiler-plugin\compile\default-compile\inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\maven-status\maven-compiler-plugin\testCompile\default-testCompile\createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\maven-status\maven-compiler-plugin\testCompile\default-testCompile\inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\original-dropwizard-example-1.0.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\surefire-reports\TEST-com.example.helloworld.IntegrationTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\surefire-reports\TEST-com.example.helloworld.resources.PeopleResourceTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\surefire-reports\TEST-com.example.helloworld.resources.PersonResourceTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\surefire-reports\TEST-com.example.helloworld.resources.ProtectedResourceTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\surefire-reports\com.example.helloworld.IntegrationTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\surefire-reports\com.example.helloworld.resources.PeopleResourceTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\surefire-reports\com.example.helloworld.resources.PersonResourceTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\surefire-reports\com.example.helloworld.resources.ProtectedResourceTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\test-classes\com\example\helloworld\IntegrationTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\test-classes\com\example\helloworld\resources\PeopleResourceTest$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\test-classes\com\example\helloworld\resources\PeopleResourceTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\test-classes\com\example\helloworld\resources\PersonResourceTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\test-classes\com\example\helloworld\resources\ProtectedResourceTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\titus.chirchir12\utamatisi\target\test-classes\test-example.yml" afterPath="" />
     </list>
     <ignored path="dropwizard-example.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" ignored="false" />
-    <file path="$PROJECT_DIR$/dropwizard.config.yml" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,36 +342,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dropwizard-example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utamatisi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1111,7 +1145,7 @@
       <workItem from="1453551667003" duration="31892000" />
       <workItem from="1453647403515" duration="12848000" />
       <workItem from="1453672149950" duration="23515000" />
-      <workItem from="1453696178863" duration="5928000" />
+      <workItem from="1453696178863" duration="6234000" />
     </task>
     <task id="LOCAL-00001" summary="Rename module">
       <created>1453696624412</created>
@@ -1125,11 +1159,17 @@
       <option name="project" value="LOCAL" />
       <updated>1453756622908</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Delete Target classes">
+      <created>1453756939035</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1453756939035</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79406000" />
+    <option name="totallyTimeSpent" value="79712000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1178,7 +1218,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Rename module" />
     <MESSAGE value="change banner" />
-    <option name="LAST_COMMIT_MESSAGE" value="change banner" />
+    <MESSAGE value="Delete Target classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete Target classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
