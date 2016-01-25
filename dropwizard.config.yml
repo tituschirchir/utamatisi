@@ -13,7 +13,7 @@ database:
   user: postgres
 
   # the password
-  password: poasana
+  password: c0nd0ne9
 
   # the JDBC URL
   url: jdbc:postgresql://localhost:8888/fintech
