@@ -4,3 +4,6 @@
 /.tgitconfig
 
 # Created by .ignore support plugin (hsz.mobi)
+/target
+/.idea
+/dependency-reduced-pom.xml
