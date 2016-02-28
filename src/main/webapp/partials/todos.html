@@ -1,0 +1,32 @@
+<h2>Todo</h2>
+
+<div ng-controller="TodoCtrl">
+    <form class="form-inline" ng-submit="addTodo(todoForm.todo)">
+        <input type="text" class="span3" ng-model="todoForm.todo.task" size="30" placeholder="add new todo here">
+        <input type="checkbox" class="span4" ng-model="todoForm.todo.inProgress">
+        <input class="btn-primary" type="submit" value="add">
+    </form>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>Done?</th>
+            <th>In Progress?</th>
+            <th>Todo Item</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="todo in todoList">
+            <td>
+                <input type="checkbox" ng-model="todo.done">
+            </td>
+            <td>
+                <input type="checkbox" ng-model="todo.inProgress">
+            </td>
+            <td class="done-{{todo.done}}">{{todo.task}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <span>{{remaining()}} of {{todoList.length}} remaining</span>
+    [ <a href="" ng-click="archive()">archive</a> ]
+</div>

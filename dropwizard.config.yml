@@ -31,6 +31,7 @@ database:
       hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
       hibernate.show_sql: true
       hibernate.format_sql: true
+      hibernate.hbm2ddl.auto: update
 # use the simple server factory if you only want to run on a single port
 #server:
 #  type: simple

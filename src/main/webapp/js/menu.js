@@ -4,13 +4,8 @@ var sidebarMenu = angular.module('sidebarMenu', ['ngRoute'])
         //$locationProvider.html5Mode(true);
         $routeProvider
             .when('/', {templateUrl: '/partials/hello.html'})
-            .when('/sharing-data', {templateUrl: '/partials/sharing-data.html'})
-            .when('/filters-and-directives', {templateUrl: '/partials/filters-and-directives.html'})
-            .when('/controller-and-directives', {templateUrl: '/partials/controller-and-directives.html'})
-            .when('/scope-isolation', {templateUrl: '/partials/scope-isolation.html'})
-            .when('/raffler', {templateUrl: '/partials/raffler.html'})
-            .when('/tabs', {templateUrl: '/partials/tabs.html'})
             .when('/persons', {templateUrl: '/partials/persons.html'})
+            .when('/todos', {templateUrl: '/partials/todos.html'})
             .otherwise({redirectTo: '/'})
     });
 
@@ -47,38 +42,13 @@ sidebarMenu.factory('Menu', function () {
         },
         {
             class: "",
-            href: "/#/sharing-data",
-            name: "Sharing data"
-        },
-        {
-            class: "",
-            href: "/#/filters-and-directives",
-            name: "Filters & directives"
-        },
-        {
-            class: "",
-            href: "/#/controller-and-directives",
-            name: "Controller & directives"
-        },
-        {
-            class: "",
-            href: "/#/scope-isolation",
-            name: "Scope isolation"
-        },
-        {
-            class: "",
-            href: "/#/raffler",
-            name: "Raffle example"
-        },
-        {
-            class: "",
-            href: "/#/tabs",
-            name: "Tabs"
-        },
-        {
-            class: "",
             href: "/#/persons",
             name: "Person View / Edit"
+        },
+        {
+            class: "",
+            href: "/#/todos",
+            name: "Todo List"
         }
     ];
     return Menu;

@@ -17,7 +17,6 @@ myApp.factory('PersonsResource', function ($resource) {
 myApp.factory('PersonResource', function ($resource) {
     return $resource('/api/people/:id', {}, {});
 });
-
 function PersonsCtrl($scope, PersonsResource, PersonResource, $dialog, $q) {
     /**
      * Define an object that will hold data for the form. The persons list will be pre-loaded with the list of

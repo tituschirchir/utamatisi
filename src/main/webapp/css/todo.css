@@ -1,4 +1,8 @@
-.done-true {
+.done-true-false {
     text-decoration: line-through;
     color: grey;
+}
+
+.done-false-true {
+    color: forestgreen;
 }

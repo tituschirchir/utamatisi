@@ -18,7 +18,7 @@ public class Person extends BusinessDateMilestonedImpl {
             + " and lower(p.firstName) like lower(:name) or lower(p.lastName) like lower(:name)";
     public static final String DELETE_BY_ID = "delete from Person where id=:id";
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(name = "firstName", nullable = false)

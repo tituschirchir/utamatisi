@@ -1,5 +1,5 @@
 var helloApp = angular.module('helloApp', ['sidebarMenu', 'sharingData', 'avengers',
-    'scopeIsolation', 'twitterApp', 'raffleApp', 'tabs', 'persons']);
+    'scopeIsolation', 'twitterApp', 'raffleApp', 'tabs', 'todos', 'persons']);
 function HelloCtrl($scope) {
     $scope.data = {message: "World"}
 }

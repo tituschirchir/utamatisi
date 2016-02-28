@@ -3,8 +3,9 @@ package com.utamatisi.app.client;
 import com.codahale.metrics.health.HealthCheck;
 import com.utamatisi.app.cli.RenderCommand;
 import com.utamatisi.app.models.domain.Account;
-import com.utamatisi.app.models.milestone.BusinessDateMilestonedImpl;
 import com.utamatisi.app.models.domain.Person;
+import com.utamatisi.app.models.domain.Todo;
+import com.utamatisi.app.models.milestone.BusinessDateMilestonedImpl;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.configuration.EnvironmentVariableSubstitutor;
@@ -17,43 +18,59 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.servlets.CrossOriginFilter;
 import org.eclipse.jetty.webapp.WebAppContext;
 
-import javax.servlet.DispatcherType;
-import javax.servlet.FilterRegistration;
-import java.util.EnumSet;
+import java.io.FileInputStream;
 import java.util.Map;
+import java.util.Properties;
 
 public class DropwizardGateway extends Application<DropwizardConfiguration> {
 
     public static final String APP_DIR = "src/main/webapp/";
-    public static final String ALLOWED_HEADERS = "X-Requested-With,Content-Type,Accept,Origin";
-    public static final String ALLOWED_METHODS = "OPTIONS,GET,PUT,POST,DELETE,HEAD";
     public static final String WEB_XML_LOCATION = "/WEB-INF/web.xml";
     private final HibernateBundle<DropwizardConfiguration> hibernateBundle =
-            new HibernateBundle<DropwizardConfiguration>(Person.class, Account.class, BusinessDateMilestonedImpl.class) {
+            new HibernateBundle<DropwizardConfiguration>(Person.class, Account.class, Todo.class, BusinessDateMilestonedImpl.class) {
                 @Override
                 public DataSourceFactory getDataSourceFactory(DropwizardConfiguration configuration) {
                     return configuration.getDataSourceFactory();
                 }
             };
+
     public static void main(String[] args) throws Exception {
+        loadSystemProperties();
         startRestServices(args);
         startWebApp();
+    }
+
+    private static void loadSystemProperties() throws Exception {
+        FileInputStream propFile = new FileInputStream("system.properties");
+        Properties properties = new Properties(System.getProperties());
+        properties.load(propFile);
+        System.setProperties(properties);
     }
 
     private static void startRestServices(String[] args) throws Exception {
         new DropwizardGateway().run(args);
     }
 
+    private static void startWebApp() throws Exception {
+        String webPort = System.getProperty("webport");
+
+        Server server = new Server(Integer.valueOf(webPort));
+        WebAppContext webapp = new WebAppContext();
+        webapp.setContextPath("/");
+        webapp.setDescriptor(APP_DIR + WEB_XML_LOCATION);
+        webapp.setResourceBase(APP_DIR);
+        server.setHandler(webapp);
+        server.start();
+        server.join();
+    }
+
     @Override
     public void initialize(Bootstrap<DropwizardConfiguration> bootstrap) {
-        // Enable variable substitution with environment variables
         bootstrap.setConfigurationSourceProvider(new SubstitutingSourceProvider(
                         bootstrap.getConfigurationSourceProvider(),
-                        new EnvironmentVariableSubstitutor(false)
-                )
+                        new EnvironmentVariableSubstitutor(false))
         );
 
         bootstrap.addCommand(new RenderCommand());
@@ -73,6 +90,7 @@ public class DropwizardGateway extends Application<DropwizardConfiguration> {
         });
     }
 
+
     @Override
     public void run(DropwizardConfiguration configuration, Environment environment) {
 
@@ -85,28 +103,7 @@ public class DropwizardGateway extends Application<DropwizardConfiguration> {
         });
         ResourceRegister.registerResources(jersey);
         ResourceRegister.registerHibernateResources(jersey, this.hibernateBundle);
-
-        final FilterRegistration.Dynamic cors = environment.servlets().addFilter("CORS", CrossOriginFilter.class);
-        cors.setInitParameter("allowedOrigins", "*");
-        cors.setInitParameter("allowedHeaders", ALLOWED_HEADERS);
-        cors.setInitParameter("allowedMethods", ALLOWED_METHODS);
-
-        cors.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*");
-    }
-
-    private static void startWebApp() throws Exception {
-        String webPort = System.getenv("PORT");
-        if (webPort == null || webPort.isEmpty()) {
-            webPort = "9000";
-        }
-        Server server = new Server(Integer.valueOf(webPort));
-        WebAppContext webapp = new WebAppContext();
-        webapp.setContextPath("/");
-        webapp.setDescriptor(APP_DIR + WEB_XML_LOCATION);
-        webapp.setResourceBase(APP_DIR);
-        server.setHandler(webapp);
-        server.start();
-        server.join();
+        ResourceRegister.registerCors(environment);
     }
 
 }
