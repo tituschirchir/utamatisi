@@ -11,7 +11,6 @@ import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/people")
-@Produces(MediaType.APPLICATION_JSON)
 public class PeopleResource {
 
     private final PersonDAO peopleDAO;
@@ -22,11 +21,13 @@ public class PeopleResource {
 
     @POST
     @UnitOfWork
+    @Consumes(MediaType.APPLICATION_JSON)
     public Person createPerson(Person person) {
         return peopleDAO.create(person);
     }
 
     @DELETE
+    @Produces(MediaType.APPLICATION_JSON)
     @UnitOfWork
     @Path("/{id}")
     public Response deletePerson(@PathParam("id") IntParam id) {
@@ -35,6 +36,7 @@ public class PeopleResource {
     }
 
     @GET
+    @Produces(MediaType.APPLICATION_JSON)
     @UnitOfWork
     @Path("/search/{name}")
     public List<Person> getPersonByName(@PathParam("name") String name) {
@@ -42,6 +44,7 @@ public class PeopleResource {
     }
 
     @GET
+    @Produces(MediaType.APPLICATION_JSON)
     @UnitOfWork
     public List<Person> listPeople() {
         return peopleDAO.findAll();
