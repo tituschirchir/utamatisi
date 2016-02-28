@@ -24,5 +24,11 @@ public class TodoDAO extends AbstractDAO<Todo> {
         return list(namedQuery("Todo.findAll"));
     }
 
+    public void delete(Long id) {
+        Todo todo = findById(id).get();
+        todo.delete();
+        currentSession().saveOrUpdate(todo);
+    }
+
 }
 

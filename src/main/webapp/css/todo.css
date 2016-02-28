@@ -1,11 +1,11 @@
 .done-true-false {
-    text-decoration: line-through;
-    color: grey;
+    color: green;
 }
 
 .done-false-true {
-    color: forestgreen;
+    color: #f0ad4e;
 }
-.Home{
-    color: Red;
+
+.done-false-false {
+    color: red;
 }

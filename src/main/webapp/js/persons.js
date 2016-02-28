@@ -81,8 +81,8 @@ function PersonsCtrl($scope, PersonsResource, PersonResource, $dialog, $q) {
         msgBox.open().then(function (result) {
             if (result === 'yes') {
                 // remove from the server and reload the person list from the server after the delete
-                PersonResource.delete({id: person.id}).$promise.then(function() {
-                    $scope.persons = PersonsResource.query();
+                TodoResource.delete({id: person.id}).$promise.then(function() {
+                    $scope.persons = TodoResource.query();
                 });
             }
         });

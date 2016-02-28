@@ -10,10 +10,10 @@ import java.util.Objects;
 @NamedQueries({
         @NamedQuery(name = "Todo.findAll", query = Todo.GENERIC_SELECT)
 })
-public class Todo {
-    public static final String GENERIC_SELECT = "select t from Todo t";
+public class Todo  extends BusinessDateMilestonedImpl {
+    public static final String GENERIC_SELECT = "select t from Todo t  where t.businessDateTo >= CURRENT_TIMESTAMP";
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
     @Column(name = "task", nullable = false)

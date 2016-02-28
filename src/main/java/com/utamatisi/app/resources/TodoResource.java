@@ -3,12 +3,11 @@ package com.utamatisi.app.resources;
 import com.utamatisi.app.db.TodoDAO;
 import com.utamatisi.app.models.domain.Todo;
 import io.dropwizard.hibernate.UnitOfWork;
+import io.dropwizard.jersey.params.LongParam;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 /**
@@ -33,8 +32,16 @@ public class TodoResource {
 
     @POST
     @UnitOfWork
-    public Todo createTodo(Todo person) {
-        return todoDAO.create(person);
+    public Todo createTodo(Todo todo) {
+        return todoDAO.create(todo);
+    }
+    @DELETE
+    @Produces(MediaType.APPLICATION_JSON)
+    @UnitOfWork
+    public Response deleteTodo(@QueryParam("id")LongParam id)
+    {
+        todoDAO.delete(id.get());
+        return Response.ok().build();
     }
 
 }
