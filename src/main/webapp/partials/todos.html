@@ -1,13 +1,14 @@
 <h2>Todo</h2>
 
 <div ng-controller="TodoCtrl">
-    <form class="form-inline" ng-submit="addTodo(todoForm.todo)">
+    <form class="form-inline" ng-submit="saveTodo(todoForm.todo)">
         <input type="text" class="span3" ng-model="todoForm.todo.task" size="30" placeholder="add new todo here">
-        <input class="btn-primary" type="submit" value="add">
+        <input class="btn-primary" type="submit" value="Save">
+        <button type="button" class="btn" ng-click="clearForm()">Clear form</button>
     </form>
     <div>
     <span ng-if="remaining()===0 && todoList.length!==0">
-        <strong><h1>You Have Completed All Tasks!! Congratulations!</h1></strong>
+        <h1>You Have Completed All Tasks!! Congratulations!</h1>
     </span>
     </div>
     <table class="table table-bordered table-striped">
@@ -21,6 +22,7 @@
         <tbody>
         <tr ng-repeat="todo in todoList">
             <td style="width: 200px">
+                <button class="btn" ng-click="editTodo(todo)"><i class="icon-edit"></i></button>
                 <button class="btn" ng-click="deleteTodo(todo)"><i class="icon-trash"></i></button>
                 <button class="btn" ng-click="toggleTodo(todo)"><i class="button pure-button-primary">
                     <span ng-if="todo.inProgress">Mark As Done</span>

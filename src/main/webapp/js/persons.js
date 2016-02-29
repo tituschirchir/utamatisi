@@ -17,7 +17,7 @@ myApp.factory('PersonsResource', function ($resource) {
 myApp.factory('PersonResource', function ($resource) {
     return $resource('/api/people/:id', {}, {});
 });
-function PersonsCtrl($scope, PersonsResource, PersonResource, $dialog, $q) {
+function PersonsCtrl($scope, PersonsResource, PersonResource, $dialog) {
     /**
      * Define an object that will hold data for the form. The persons list will be pre-loaded with the list of
      * persons from the server. The personForm.person object is bound to the person form in the HTML via the
@@ -50,13 +50,15 @@ function PersonsCtrl($scope, PersonsResource, PersonResource, $dialog, $q) {
      */
     $scope.savePerson = function (person) {
         if (person != undefined) {
-            /**
-             * Here we need to ensure that the PersonsResource.query() is done after the PersonsResource.save. This
-             * is achieved by using the $promise returned by the $resource object.
-             */
-            PersonsResource.save(person).$promise.then(function() {
+            var save = PersonsResource.save(person);
+            var promise = save.$promise;
+            if(promise == undefined)
+            {
+                promise = save;
+            }
+            promise.then(function() {
                 $scope.personForm.person = {};  // clear the form
-                $scope.togglePersonForm;
+                togglePersonForm();
                 $scope.persons = PersonsResource.query();
             });
         }
@@ -81,7 +83,7 @@ function PersonsCtrl($scope, PersonsResource, PersonResource, $dialog, $q) {
         msgBox.open().then(function (result) {
             if (result === 'yes') {
                 // remove from the server and reload the person list from the server after the delete
-                TodoResource.delete({id: person.id}).$promise.then(function() {
+                TodoResource.delete({id: person.id}).then(function() {
                     $scope.persons = TodoResource.query();
                 });
             }
