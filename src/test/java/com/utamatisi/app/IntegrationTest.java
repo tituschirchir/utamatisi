@@ -72,13 +72,12 @@ public class IntegrationTest {
     @Test
     public void serializesToJSON() throws Exception {
         final Person person = new Person("Walter", "White", "Cook");
-        File file = new File("C:\\Users\\titus.chirchir12\\IdeaProjects\\utamatisi\\src\\test\\resources\\fixtures\\actualPerson.json");
-        if(!file.exists())
-        {
+        File file = new File(System.getProperty("user.dir") + "\\src\\main\\resources\\tests\\actualPerson.json");
+        if (!file.exists()) {
             file.createNewFile();
         }
         MAPPER.writeValue(file, person);
-        Person readPerson = MAPPER.readValue(fixture("fixtures\\actualPerson.json"), Person.class);
+        Person readPerson = MAPPER.readValue(fixture("tests/actualPerson.json"), Person.class);
         assertThat(readPerson.getLastName()).isEqualTo(person.getLastName());
 
     }
