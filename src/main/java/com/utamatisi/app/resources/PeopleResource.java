@@ -29,8 +29,7 @@ public class PeopleResource {
     @DELETE
     @Produces(MediaType.APPLICATION_JSON)
     @UnitOfWork
-    @Path("/{id}")
-    public Response deletePerson(@PathParam("id") IntParam id) {
+    public Response deletePerson(@QueryParam("id") IntParam id) {
         peopleDAO.delete(id.get());
         return Response.ok().build();
     }

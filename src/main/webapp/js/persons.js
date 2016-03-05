@@ -58,7 +58,6 @@ function PersonsCtrl($scope, PersonsResource, PersonResource, $dialog) {
             }
             promise.then(function() {
                 $scope.personForm.person = {};  // clear the form
-                togglePersonForm();
                 $scope.persons = PersonsResource.query();
             });
         }
@@ -82,9 +81,14 @@ function PersonsCtrl($scope, PersonsResource, PersonResource, $dialog) {
         ]);
         msgBox.open().then(function (result) {
             if (result === 'yes') {
-                // remove from the server and reload the person list from the server after the delete
-                TodoResource.delete({id: person.id}).then(function() {
-                    $scope.persons = TodoResource.query();
+                var deletePerson = PersonsResource.delete({id: person.id});
+                var promise = deletePerson.$promise;
+                if(promise == undefined)
+                {
+                    promise = deletePerson;
+                }
+                promise.then(function() {
+                    $scope.persons = PersonResource.query();
                 });
             }
         });
