@@ -5,6 +5,7 @@ import com.utamatisi.app.auth.ExampleAuthorizer;
 import com.utamatisi.app.db.AccountDAO;
 import com.utamatisi.app.db.PersonDAO;
 import com.utamatisi.app.db.TodoDAO;
+import com.utamatisi.app.db.TreeDAO;
 import com.utamatisi.app.filter.DateRequiredFeature;
 import com.utamatisi.app.models.User;
 import com.utamatisi.app.resources.*;
@@ -47,11 +48,13 @@ public class ResourceRegister {
     public static void registerHibernateResources(JerseyEnvironment jersey, HibernateBundle<DropwizardConfiguration> hibernateBundle) {
         SessionFactory sessionFactory = hibernateBundle.getSessionFactory();
         final PersonDAO dao = new PersonDAO(sessionFactory);
+        final TreeDAO treeDAO = new TreeDAO(sessionFactory);
         final TodoDAO todoDAO = new TodoDAO(sessionFactory);
         jersey.register(new PeopleResource(dao));
         jersey.register(new AccountResource(new AccountDAO(sessionFactory)));
         jersey.register(new PersonResource(dao));
         jersey.register(new TodoResource(todoDAO));
+        jersey.register(new TreeResource(treeDAO));
     }
     public static void registerCors(Environment environment) {
         final FilterRegistration.Dynamic cors = environment.servlets().addFilter("CORS", CrossOriginFilter.class);

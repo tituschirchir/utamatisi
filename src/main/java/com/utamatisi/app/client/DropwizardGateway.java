@@ -5,6 +5,7 @@ import com.utamatisi.app.cli.RenderCommand;
 import com.utamatisi.app.models.domain.Account;
 import com.utamatisi.app.models.domain.Person;
 import com.utamatisi.app.models.domain.Todo;
+import com.utamatisi.app.models.domain.Tree;
 import com.utamatisi.app.models.milestone.BusinessDateMilestonedImpl;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
@@ -29,7 +30,7 @@ public class DropwizardGateway extends Application<DropwizardConfiguration> {
     public static final String APP_DIR = "src/main/webapp/";
     public static final String WEB_XML_LOCATION = "/WEB-INF/web.xml";
     private final HibernateBundle<DropwizardConfiguration> hibernateBundle =
-            new HibernateBundle<DropwizardConfiguration>(Person.class, Account.class, Todo.class, BusinessDateMilestonedImpl.class) {
+            new HibernateBundle<DropwizardConfiguration>(Person.class, Account.class,Tree.class, Todo.class, BusinessDateMilestonedImpl.class) {
                 @Override
                 public DataSourceFactory getDataSourceFactory(DropwizardConfiguration configuration) {
                     return configuration.getDataSourceFactory();

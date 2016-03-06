@@ -43,7 +43,7 @@ database:
 server:
   applicationConnectors:
     - type: http
-      port: 9179
+      port: 9123
       outputBufferSize: 32KiB
       idleTimeout: 30 seconds
       minBufferPoolSize: 64 bytes
@@ -56,7 +56,7 @@ server:
       soLingerTime: 600s
   adminConnectors:
     - type: http
-      port: 9180
+      port: 9124
 
 # Logging settings.
 logging:

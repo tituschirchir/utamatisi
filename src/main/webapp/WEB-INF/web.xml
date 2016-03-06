@@ -14,7 +14,7 @@
         <servlet-class>org.mitre.dsmiley.httpproxy.ProxyServlet</servlet-class>
         <init-param>
             <param-name>targetUri</param-name>
-            <param-value>http://localhost:9179/</param-value>
+            <param-value>http://localhost:9123/</param-value>
         </init-param>
         <init-param>
             <param-name>Prefix</param-name>

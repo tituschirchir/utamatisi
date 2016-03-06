@@ -1,1 +1,1 @@
-angular.module('utamatisiApp', ['sidebarMenu', 'todos', 'persons']);
+angular.module('utamatisiApp', ['sidebarMenu', 'todos', 'persons', 'trees']);

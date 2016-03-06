@@ -9,6 +9,7 @@ import java.util.List;
  * Package: ${PACKAGE}
  */
 public enum Role {
+    NONE,
     READ_ONLY("read"),
     READ_WRITE("read","write");
 

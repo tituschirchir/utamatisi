@@ -1,1 +1,7 @@
-<echo message="Hello, world"/>
+<project name="build-utils" basedir=".">
+    <target name="run-main-class">
+        <java classname="com.utamatisi.app.client.DropwizardGateway" failonerror="true">
+            <arg value="${basedir}"/>
+        </java>
+    </target>
+</project>
